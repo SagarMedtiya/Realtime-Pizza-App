@@ -1,0 +1,28 @@
+[+] Create directory structure
+[+] Create a NPM project and install all dependancies
+    - dependancies
+        - express
+        - ejs express-ejs-layouts
+    -dev dependancies
+        - nodemon
+[+] Create Express server - Create a server.js file
+[+] Git setup and first commit 
+[+] install laravel and mix 
+        https://github.com/laravel-mix/laravel-mix/blob/2ac5735f44b2c2716617345e57a0df578f479dee/docs/installation.md
+    - setup js and scss
+        pnpm run watch
+[+] Create home page using html, css
+    - include tailwind css
+[.] Create cart page
+    - order summary section
+    - empty cart section
+[.] Create orders controller and link it in server.js
+[.] Create orders view with table for customer and admin
+[.] Create orders single page with status
+[.] Create login page with route
+[.] Create register page with route
+[.] Build register crud
+    - dependancies express-flash express-session cookie-parser dotenv
+    - status code article https://www.restapitutorial.com/httpstatuscodes.html
+    - Database connection, dependancies mongoose
+    
