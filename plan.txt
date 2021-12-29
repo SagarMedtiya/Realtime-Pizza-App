@@ -13,16 +13,38 @@
         pnpm run watch
 [+] Create home page using html, css
     - include tailwind css
-[.] Create cart page
+[+] Embedding Material Design Lite 
+[+] Create cart page
     - order summary section
     - empty cart section
+[+] Move routes to routes file
+[+] Create dedicated controllers
+[.] Add to cart functionality
+    [+] Fetch all pizzas on db and show on home page
+    [+] Create menu model and put dummy Data
+    - connect to mongo db
+    - use connect-mongo for session store
+        - dependancies
+            - mongoose, express-session, connect-mongo, dotenv
+    - axios to send Ajax request
+    - install notification library npm i noty (https://ned.im/noty/#/)
 [.] Create orders controller and link it in server.js
 [.] Create orders view with table for customer and admin
 [.] Create orders single page with status
-[.] Create login page with route
-[.] Create register page with route
-[.] Build register crud
+[+] Create login page with route
+[+] Create register page with route
+[+] Build register crud
     - dependancies express-flash express-session cookie-parser dotenv
     - status code article https://www.restapitutorial.com/httpstatuscodes.html
     - Database connection, dependancies mongoose
-    
+[+] Build login using passport  
+    -install dependancies passport passport-local express-session
+[.] Create order controller and link it in server.js
+[.] Create orders view with table for customer and admin
+[.] Create orders single page with status
+[.] Make order on carts page
+[.] Place order functionality 
+[.] Order tracker
+    - dependancies moment
+[.] Socket connection
+
