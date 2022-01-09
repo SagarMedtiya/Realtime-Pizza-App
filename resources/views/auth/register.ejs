@@ -1,0 +1,43 @@
+<section class="login flex justify-center pt-24 ">
+    <div class="bg-white shadow-md px-8 pt-6 pb-8 mb-24 flex flex-col">
+        <form action="/register" method='POST'>
+            <% if(messages.error) { %>
+            <span class='text-red-500 text-sm'><%= messages.error %></span>
+            <% } %>
+            <div class="mb-4">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input name="name" id="name" class="mdl-textfield__input" type="text" value='<%= messages.name %>'>
+                    <label class="mdl-textfield__label" for="name" >Your name</label>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input name="email" class="mdl-textfield__input" id="email" type="email" value='<%= messages.email %>'>
+                    <label class="mdl-textfield__label" for="email" >Email</label>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="inputText mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input name="number" id="number" class="mdl-textfield__input" value='<%= messages.number %>' type="text" pattern="[789][0-9]{9}" id="sample4">
+                    <label class="mdl-textfield__label" for="sample4" >Mobile number</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+            </div>
+            <div class="mb-6 ">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input name="password" id="password"class="mdl-textfield__input" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                    <label class="mdl-textfield__label" for="password">Password</label>
+                    <span class="mdl-textfield__error">Must contain at least one number, one uppercase letter, one lowercase letter and at least 8 or more characters.</span>
+                </div>
+            </div>
+            <div>
+                <button class="order-now-button text-white font-bold py-2 px-4 rounded-full" type="submit">
+                    Register
+                </button>
+                <a class="inline-block align-baseline font-bold text-md ml-24" href="/login">
+                   Already have an account?
+                </a>
+            </div>
+        </form> 
+    </div>
+</section>
