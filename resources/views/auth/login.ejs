@@ -1,0 +1,30 @@
+<section class="login flex justify-center pt-24 ">
+    <div class="bg-white shadow-md px-8 pt-6 pb-8 mb-24 flex flex-col">
+        <form action="/login" method="POST">
+            <% if(messages.error) {%>
+            <span class="text-red-500 "><%= messages.error %></span>
+            <% } %>
+            <div class="mb-4">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input name="email" class="mdl-textfield__input" type="email" id="email">
+                    <label class="mdl-textfield__label" for="email" >Email</label>
+                </div>
+            </div>
+            <div class="mb-6 ">
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input name="password" class="mdl-textfield__input" type="password" id="password">
+                    <label class="mdl-textfield__label" for="password" >Password</label>
+                </div>
+            </div>
+            <div>
+                <button class="order-now-button text-white font-bold py-2 px-4 rounded-full" type="submit">
+                    Log In
+                </button>
+                <a class="inline-block align-baseline font-bold text-md ml-24" href="/register">
+                    Don't have an account?
+                </a>
+            </div>
+        </form> 
+    </div>
+</section>
