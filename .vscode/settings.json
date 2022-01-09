@@ -1,0 +1,4 @@
+{
+    "appService.deploySubpath": ".",
+    "appService.defaultWebAppToDeploy": "/subscriptions/5b78519b-42d7-49a3-895e-64208f682c75/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/pizzamart"
+}
