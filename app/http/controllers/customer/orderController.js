@@ -33,32 +33,36 @@ function orderController(){
                         amount: req.session.cart.totalPrice *100,
                         source: stripeToken,
                         currency: 'inr',
-                        description: `Pizza OrderId: ${orderPlaced,_id}`
+                        description: `Pizza OrderId: ${orderPlaced._id}`
                     }).then(()=>{
-                        orderPlaced.pamentStatus= true;
+                        
+                        orderPlaced.paymentType = paymentType
+                        orderPlaced.paymentStatus= true;
                         orderPlaced.save().then((order)=>{
                         console.log(orderPlaced)
                         console.log(order)
                         //emit
                         const eventEmitter = req.app.get('eventEmitter')
                         eventEmitter.emit('orderPlaced', order)
+                        delete req.session.cart
                         return res.json({ message : 'Payment done, Order placed successfully'});
                         }).catch(err=>{
                             console.log(err)
                         })
                     }).catch((err)=>{
+                        delete req.session.cart
                         return res.json({ message: 'Payment failed but order is placed.' })
                     })
                 }
-
-                delete req.session.cart
-                
-                //return res.redirect('/customer/order')
+                else{
+                    return res.json({ message: 'Order is placed successfully' })
+                }
                })
                 
             }).catch(err=>{
-                req.flash('error','Something went wrong')
-                return res.redirect('/cart')
+                //req.flash('error','Something went wrong')
+                //return res.redirect('/cart')
+                return res.status(500).json({ message: 'Something went wrong' })
             })
         },
         async index(req,res){
