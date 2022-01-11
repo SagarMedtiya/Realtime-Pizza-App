@@ -15,6 +15,7 @@ specifiers:
   express-ejs-layouts: ^2.5.1
   express-flash: ^0.0.2
   express-session: ^1.17.2
+  izitoast: ^1.4.0
   laravel-mix: ^6.0.39
   moment: ^2.29.1
   mongodb: ^4.2.2
@@ -48,6 +49,7 @@ dependencies:
   express-ejs-layouts: 2.5.1
   express-flash: 0.0.2
   express-session: 1.17.2
+  izitoast: 1.4.0
   moment: 2.29.1
   mongodb: 4.2.2
   mongoose: 6.1.2
@@ -4226,6 +4228,10 @@ packages:
 
   /isstream/0.1.2:
     resolution: {integrity: sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=}
+    dev: false
+
+  /izitoast/1.4.0:
+    resolution: {integrity: sha512-Oc1X2wiQtPp39i5VpIjf3GJf5sfCtHKXZ5szx7RareyEeFLUlcEW0FSfBni28+Ul6KNKZRKzhVuWzSP4Xngh0w==}
     dev: false
 
   /jake/10.8.2:
