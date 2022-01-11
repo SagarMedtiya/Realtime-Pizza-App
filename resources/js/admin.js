@@ -1,7 +1,7 @@
 import moment from 'moment'
 import axios from 'axios'
 import Noty from 'noty'
-
+import iziToast from 'izitoast'
 
 export function initAdmin(socket){
     const orderTableBody = document.querySelector('#orderTableBody')
@@ -88,12 +88,11 @@ export function initAdmin(socket){
     }
 
     socket.on('orderPlaced',(order)=>{
-        new Noty({
-            theme: 'nest',
+        iziToast.success({
+            message: 'New order placed',
+            position: 'topRight',
             timeout: 1000,
-            type: 'success',
-            text: 'New order placed'
-        }).show();
+        })
         orders.unshift(order)
         orderTableBody.innerHTML =''
         orderTableBody.innerHTML = generateMarkup(orders)
