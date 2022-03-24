@@ -55,6 +55,7 @@ function orderController(){
                     })
                 }
                 else{
+                    delete req.session.cart
                     return res.json({ message: 'Order is placed successfully' })
                 }
                })
